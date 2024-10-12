@@ -6,7 +6,7 @@ const connectDB=require('./db/connect');
 const authRouter=require('./routes/auth');
 const jobRouter=require('./routes/jobs');
 const authentication=require('./middleware/authentication');
-const cors=require('cors);
+const cors=require('cors');
 
 
 // error handler
