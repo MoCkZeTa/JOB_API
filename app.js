@@ -6,6 +6,7 @@ const connectDB=require('./db/connect');
 const authRouter=require('./routes/auth');
 const jobRouter=require('./routes/jobs');
 const authentication=require('./middleware/authentication');
+const cors=require('cors);
 
 
 // error handler
@@ -13,6 +14,7 @@ const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
 
+app.use(cors());
 
 app.use(express.json());
 
