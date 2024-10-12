@@ -8,27 +8,19 @@ const jobRouter=require('./routes/jobs');
 const authentication=require('./middleware/authentication');
 
 
-const helmet = require('helmet');
+
 const cors = require('cors');
-const xss = require('xss-clean');
-const rateLimiter = require('express-rate-limit');
+
 
 
 // error handler
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
-app.set('trust proxy', 1);
-app.use(
-  rateLimiter({
-    windowMs: 15 * 60 * 1000,
-    max: 100,
-  })
-);
-app.use(express.json());
-app.use(xss());
+
+
 app.use(cors());
-app.use(helmet());
+
 
 
 // routes
