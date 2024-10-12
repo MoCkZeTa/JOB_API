@@ -19,6 +19,7 @@ const deleteJob = async (req,res)=>{
 };
 
 
+
 const getAllJobs = async (req,res)=>{
     const jobs=await Job.find({createdBy: req.user.userID});
     res.status(StatusCodes.OK).json({jobs,count:jobs.length});  
