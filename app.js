@@ -8,12 +8,6 @@ const jobRouter=require('./routes/jobs');
 const authentication=require('./middleware/authentication');
 
 
-const helmet = require('helmet');
-const cors = require('cors');
-const xss = require('xss-clean');
-const rateLimiter = require('express-rate-limit');
-
-
 // error handler
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
